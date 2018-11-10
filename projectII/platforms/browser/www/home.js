@@ -151,7 +151,3 @@ function showSearch(product) {
     var html = ejs.render(product_template, { products: product });
     $('#products').html(html);
 }
-
-function scanQR(){
-    window.location.href = 'scan.html';
-  }
