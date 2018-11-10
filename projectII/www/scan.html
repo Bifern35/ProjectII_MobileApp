@@ -21,6 +21,10 @@
                     localStorage.setItem("code", text)
                     QRScanner.hide();
                     window.location.href = 'index.html';
+                    console.log(product);
+                    var product_template = $('#product_template').html();
+                    var html = ejs.render(product_template, { products: product });
+                    $('#products').html(html);
                 }
             }
             QRScanner.show();
