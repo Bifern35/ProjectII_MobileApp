@@ -152,6 +152,6 @@ function showSearch(product) {
     $('#products').html(html);
 }
 
-function scanQR(){
+function scanQR() {
     window.location.href = 'scan.html';
-  }
+}

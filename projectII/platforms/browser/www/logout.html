@@ -5,7 +5,8 @@
     <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsenui.css">
     <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsen-css-components.min.css">
     <script src="https://unpkg.com/onsenui/js/onsenui.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+        crossorigin="anonymous"></script>
     <script src="ejs.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.5.7/firebase.js"></script>
     <script src="cordova.js"></script>
@@ -22,9 +23,16 @@
 
 <body>
     <ons-page>
+        <ons-toolbar style="background:#FF9797;">
+            <div class="center" id="" style="color: white; text-align: center;">
+                <b>Logout</b>
+            </div>
+        </ons-toolbar>
+        <div style="text-align: center; margin-top: 30px;">
+        <h3>Confirm to logout</h3>
         <div style="text-align: center; margin-top: 30px;">
             <p style="margin-top: 30px;">
-                <ons-button onclick="logout()">Sign out</ons-button>
+                <ons-button onclick="logout()">Logout</ons-button>
             </p>
         </div>
     </ons-page>
@@ -32,13 +40,15 @@
         function logout() {
             firebase.auth().signOut().then(function () {
                 // Sign-out successful.
-                ons.notification.alert('See u again soon').then(function(){
-                    window.location.href='login.html';
+                ons.notification.alert('See u again soon').then(function () {
+                    window.location.href = 'login.html';
                 });
             }).catch(function (error) {
+
                 // An error happened.
             });
         }
+
     </script>
 </body>
 
