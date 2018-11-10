@@ -5,7 +5,8 @@
     <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsenui.css">
     <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsen-css-components.min.css">
     <script src="https://unpkg.com/onsenui/js/onsenui.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+        crossorigin="anonymous"></script>
     <script src="ejs.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.5.7/firebase.js"></script>
     <script src="cordova.js"></script>
@@ -23,6 +24,14 @@
 
 <body>
     <ons-page>
+        <ons-toolbar style="background:#FF9797;">
+            <div class="left">
+                <ons-back-button style="color:white;" onclick="backtologin()">Back</ons-back-button>
+            </div>
+            <div class="center" id="" style="color: white;">
+                <b>Register</b>
+            </div>
+        </ons-toolbar>
         <div style="text-align: center; margin-top: 30px;">
             <h3>Register new user</h3>
             <p>
@@ -38,6 +47,9 @@
     </ons-page>
 
     <script>
+        function backtologin(){
+            window.location.href = 'login.html';
+        }
         function register() {
             var username = document.getElementById('username').value;
             var password = document.getElementById('password').value;

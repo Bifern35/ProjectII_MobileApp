@@ -5,7 +5,8 @@
     <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsenui.css">
     <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsen-css-components.min.css">
     <script src="https://unpkg.com/onsenui/js/onsenui.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+        crossorigin="anonymous"></script>
     <script src="ejs.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.5.7/firebase.js"></script>
     <script src="cordova.js"></script>
@@ -29,6 +30,13 @@
 
 <body>
     <ons-page>
+        <ons-toolbar style="background:#FF9797;">
+            <div class="center" id="" style="color: white; text-align: center;">
+                <b>Login</b>
+            </div>
+        </ons-toolbar>
+
+        <br><br>
         <div style="text-align: center; margin-top: 30px;">
             <p>
                 <ons-input id="username" modifier="underbar" placeholder="Username" float></ons-input>
@@ -36,7 +44,7 @@
             <p>
                 <ons-input id="password" modifier="underbar" type="password" placeholder="Password" float></ons-input>
             </p>
-            <p style="margin-top: 30px;">
+            <p style="margin-top: 30px; ">
                 <ons-button onclick="login()">Sign in</ons-button>
             </p>
             <p style="margin-top: 30px;">
@@ -75,7 +83,7 @@
             });
         }
         function google() {
-           
+
             var provider = new firebase.auth.GoogleAuthProvider();
             provider.addScope('https://www.googleapis.com/auth/contacts.readonly');
             firebase.auth().signInWithRedirect(provider);
