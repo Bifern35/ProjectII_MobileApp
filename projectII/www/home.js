@@ -29,6 +29,12 @@ function changeTab(name) {
 }
 
 function getHomeData() {
+    var code = localStorage.getItem("code");
+    if (code == null) {
+    } else {
+        myNavigator.pushPage('detail.html');
+        showDetailP();
+    }
     var docRef = db.collection("UI").doc("home");
     docRef.get().then(function (doc) {
         if (doc.exists) {
@@ -81,13 +87,21 @@ function getDetail(detail) {
 }
 
 function showDetailP() {
-    var dataproduct = localStorage.getItem('detail');
+    var code = localStorage.getItem("code");
+    if (code == null) {
+        var dataproduct = localStorage.getItem("detail");
+
+    } else if (code != null) {
+        var dataproduct = localStorage.getItem("code");
+    }
+
     var apr = db.collection("PRODUCTS").where("name", "==", dataproduct);
     apr.get().then(function (querySnapshot) {
         var Detailproduct_template = $('#productDetail_template').html();
         var html = ejs.render(Detailproduct_template, { productDetail: querySnapshot.docs });
         $('#showDetail').html(html);
     })
+    localStorage.clear("code");
 
 }
 
