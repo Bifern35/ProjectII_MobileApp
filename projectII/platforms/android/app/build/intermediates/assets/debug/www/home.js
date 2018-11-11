@@ -88,7 +88,6 @@ function getDetail(detail) {
 
 function showDetailP() {
     var code = localStorage.getItem("code");
-    alert(code);
     if (code == null) {
         var dataproduct = localStorage.getItem("detail");
 
