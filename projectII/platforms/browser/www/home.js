@@ -88,7 +88,6 @@ function getDetail(detail) {
 
 function showDetailP() {
     var code = localStorage.getItem("code");
-    console.log(localStorage.getItem("detail"));
     if (code == null) {
         var dataproduct = localStorage.getItem("detail");
 
@@ -96,12 +95,11 @@ function showDetailP() {
         var dataproduct = localStorage.getItem("code");
     }
 
-    var dataproduct = localStorage.getItem('detail');
-var apr = db.collection("PRODUCTS").where("name", "==", dataproduct);
-apr.get().then(function (querySnapshot) {
-    var Detailproduct_template = $('#productDetail_template').html();
-    var html = ejs.render(Detailproduct_template, { productDetail: querySnapshot.docs });
-    $('#showDetail').html(html);
+    var apr = db.collection("PRODUCTS").where("name", "==", dataproduct);
+    apr.get().then(function (querySnapshot) {
+        var Detailproduct_template = $('#productDetail_template').html();
+        var html = ejs.render(Detailproduct_template, { productDetail: querySnapshot.docs });
+        $('#showDetail').html(html);
     })
     localStorage.clear("code");
 

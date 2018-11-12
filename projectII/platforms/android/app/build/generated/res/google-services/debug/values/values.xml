@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_web_client_id" translatable="false">370597332859-abocqi3j0ju0hpg5r5b454oktccr7h25.apps.googleusercontent.com</string>
+    <string name="firebase_database_url" translatable="false">https://shopee-89386.firebaseio.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">370597332859</string>
+    <string name="google_api_key" translatable="false">AIzaSyCQNcwaBfzOiLJHcicNL2m5-Hrck5M3pOM</string>
+    <string name="google_app_id" translatable="false">1:370597332859:android:eeab9d9ea4298e9b</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyCQNcwaBfzOiLJHcicNL2m5-Hrck5M3pOM</string>
+    <string name="google_storage_bucket" translatable="false">shopee-89386.appspot.com</string>
+    <string name="project_id" translatable="false">shopee-89386</string>
+</resources>
